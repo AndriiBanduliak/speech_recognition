@@ -23,16 +23,3 @@ except sr.RequestError as e:
 
 
 
-
-class TestWith:
-    def __enter__(self):
-        print('Вход')
-        return 1
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print('Выход')
-
-
-with TestWith() as test:
-    print('Выполнение кода внутри with')
-    print(test)
